@@ -1,47 +1,56 @@
-CREATE TABLE Company
-( company_name varchar primary key,
-  address varchar,
-  contactNo int
+CREATE TABLE userName
+( user_id int primary key,
+  user_name varchar,
+  user_password int,
+  user_type varchar
  );
  
-CREATE TABLE BranchOffice
+CREATE TABLE C_branch
 (
- officeNo int primary key,
- name varchar,
- contactNumber int,
- company_name varchar,
- foreign key(company_name) references Company(company_name));
- 
-CREATE TABLE Vendor
- ( vendorID int primary key,
-    name varchar,
-    contactNo int
-    );
-
-CREATE TABLE Item
-( ItemNo int primary key,
-  name varchar,
-  cost decimal,
-  description varchar
+ C_user_id int primary key,
+ C_branch_id int primary key,
+ location varchar,
+ foreign key(userName) references userName(user_id)
  );
-
+ 
+CREATE TABLE V_branch
+ (
+  V_user_id int primary key,
+  V_branch_id int primary key,
+  location varchar,
+  foreign key(userName) references userName(user_id)
+  );
+CREATE TABLE adminName
+(
+ user_id int primary key,
+ permission varchar,
+ foreign key(userName) references userName(user_id)
+ );
+CREATE TABLE Item
+( item_id int primary key,
+  item_name varchar
+ );
+CREATE TABLE Good
+(
+ good_id int primary key,
+ item_id int,
+ V_branch_id int,
+ Price int,
+ V_user_id int,
+ foreign key(Item) references Item(item_id),
+ foreign key(V_branch) references V_branch(V_branch_id),
+ foreign key(V_branch) references V_branch(V_user_id)
+ );
 CREATE TABLE Supplies
 (
-  suppliesNo int primary key,
-  vendorID int,
-  ItemNo int,
-  price decimal,
-  quantity int,
-  foreign key(vendorID) references Vendor(vendorID),
-  foreign key(ItemNo) references Item(ItemNo)
+  Good_id int,
+  C_user_id int,
+  C_branch_id int,
+  V_user_id int,
+  V_branch_id int,
+  foreign key(V_branch) references V_branch(V_branch_id),
+  foreign key(V_branch) references V_branch(V_user_id),
+  foreign key(C_branch) references C_branch(C_branch_id),
+  foreign key(C_branch) references C_branch(C_user_id),
+  foreign key(Good) references Good(good_id)
   );
-
-CREATE TABLE Shipping
-(
-  shipNo int primary key,
-  date date,
-  time time,
-  suppliesNo int,
-  officeNo int,
-  foreign key(suppliesNo) references Supplies(suppliesNo),
-  foreign key(officeNo) references BranchOffice(officeNo));
