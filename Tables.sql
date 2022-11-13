@@ -1,14 +1,14 @@
 CREATE TABLE `user`
-( user_id int primary key,
+( user_id int  primary key AUTO_INCREMENT,
   user_name varchar(255),
-  user_password int,
+  user_password varchar(16),
   user_type varchar(255)
  );
  
 CREATE TABLE C_branch
 (
- C_user_id int not null,
- C_branch_id int not null,
+ C_user_id int not null ,
+ C_branch_id int not null AUTO_INCREMENT,
  location varchar(255),
  Primary Key(C_user_id, C_branch_id),
  UNIQUE(C_branch_id),
@@ -19,7 +19,7 @@ CREATE TABLE C_branch
 CREATE TABLE V_branch
  (
   V_user_id int not null,
-  V_branch_id int not null,
+  V_branch_id int not null AUTO_INCREMENT,
   location varchar(255),
   Primary Key(V_user_id, V_branch_id),
   UNIQUE(V_branch_id),
@@ -34,12 +34,12 @@ CREATE TABLE `admin`
 	ON DELETE CASCADE ON UPDATE CASCADE
  );
 CREATE TABLE Item
-( item_id int primary key,
+( item_id int primary key AUTO_INCREMENT,
   item_name varchar(255)
  );
 CREATE TABLE Good
 (
- good_id int not null primary key,
+ good_id int not null primary key AUTO_INCREMENT,
  item_id int not null,
  V_branch_id int not null,
  Price int not null,
