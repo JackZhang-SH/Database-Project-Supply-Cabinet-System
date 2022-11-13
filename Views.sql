@@ -1,30 +1,32 @@
-#Shows all items that vendors have in stock.
+--Shows all items that each vendor branch has in stock.
 CREATE VIEW InStock AS 	
 (
-	SELECT  i.name, s.suppliesNo, s.ItemNo, s.VendorID, s.quantity
-    FROM Supplies as s, Item as i 
-    Where s.quantity > 0
+	SELECT i.name, i.item_id, g.good_id, V_branch_id
+    	FROM Good as g, Item as i 
 );
 
-#Lists all of the shipping table, arranged earliest date first
-CREATE VIEW ShippingByDate AS
+--Shows all goods from cheapest to most expensive
+CREATE VIEW CheapestGood AS
 (
 	SELECT * 
-    FROM Shipping
-    ORDER BY date ASC
+	FROM Good
+	ORDER BY Price ASC
 );
 
-#Lists Branch Offices with their corresponding company address
-CREATE VIEW OfficeAddress AS
+--Shows all goods with their corresponding names
+CREATE VIEW GoodsWithName AS
 (
-	SELECT b.company_name, b.officeNo, b.name, c.address
-    FROM BranchOffice as b, company as c
-    ORDER BY b.company_name
+	Select i.item_name, g.item_id, g.good_id, g.V_branch_id, g.Price
+	From Item as i, Good as g
 );
 
-#Gives the supply table but with the item's name added
-CREATE VIEW SuppliesWithName AS
+--Shows goods and their corresponding vendor and company branch locations
+CREATE VIEW SupplyLocation AS
 (
-	SELECT s.suppliesNo, s.vendorID, s.ItemNo, i.name, s.price, s.quantity
-    FROM Supplies AS s, Item AS i
+	Select Supplies.Good_id, V_branch.V_branch_id, V_branch.location, C_branch.C_branch_id, C_branch.location 
+	From Supplies 
+	Join V_branch
+	on V_branch_id
+	Join C_branch
+	on C_branch_id
 );
