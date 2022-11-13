@@ -1,11 +1,9 @@
---Shows all items that each vendor branch has in stock.
 CREATE VIEW InStock AS 	
 (
 	SELECT i.name, i.item_id, g.good_id, V_branch_id
     	FROM Good as g, Item as i 
 );
 
---Shows all goods from cheapest to most expensive
 CREATE VIEW CheapestGood AS
 (
 	SELECT * 
@@ -13,14 +11,12 @@ CREATE VIEW CheapestGood AS
 	ORDER BY Price ASC
 );
 
---Shows all goods with their corresponding names
 CREATE VIEW GoodsWithName AS
 (
 	Select i.item_name, g.item_id, g.good_id, g.V_branch_id, g.Price
 	From Item as i, Good as g
 );
 
---Shows goods and their corresponding vendor and company branch locations
 CREATE VIEW SupplyLocation AS
 (
 	Select Supplies.Good_id, V_branch.V_branch_id, V_branch.location, C_branch.C_branch_id, C_branch.location 
