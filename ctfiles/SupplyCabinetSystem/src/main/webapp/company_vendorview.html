@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<link rel="shortcut icon" href="#">
+    <title>Supply Strategies Page</title>
+    <link rel="stylesheet" href="company_vendorview.css"/>
+    <script src="company_vendor.js"></script>
+  </head>
+  <body>
+  	<form id="company_vendorview" onsubmit="return vendorview()">
+      <h1>View vendor branch's product prices</h1>
+      <input type="text" placeholder="Vendor branch ID" name="v_branch_id" required/>
+      <input type="submit" value="View"/>
+    </form>
+    <a href="supplystrategies">
+   		<button>Return to Supply Strategies View</button>
+	</a>
+	<ul id="vgood_list"></ul>
+  </body>
+</html>

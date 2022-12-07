@@ -1,0 +1,445 @@
+* {
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.active{
+    border-bottom:solid #E3E3E5 3px ;
+}
+.Home {
+    width: 105vw;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    transition: 0.9s;
+    overflow-x: auto;
+}
+
+#Turn_right {
+    position: absolute;
+    right: 0;
+    top: 40%;
+    background: none;
+    border: none;
+    height: 20%;
+    width: 10%;
+    opacity: 0.5;
+}
+
+
+#Turn_right:hover {
+
+    opacity: 1;
+}
+
+#Turn_left {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    background: none;
+    border: none;
+    opacity: 0.5;
+    height: 20%;
+    width: 10%;
+}
+
+#Turn_left:hover {
+    opacity: 1;
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.Header {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+    border-radius:0px;
+    border: white solid 3px;
+}
+
+.Header header {
+    padding: 20px;
+    font-size: 40px;
+    color:white;
+    font-weight: 800;
+}
+
+
+.shell {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    list-style: none;
+    font-size: 20px;
+}
+
+.button a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.button,
+.portrait{
+    
+    color: white;
+    width: 130px;
+    height: 65px;
+    text-align: center;
+    line-height: 65px;
+    transition: .3s;
+    cursor: pointer;
+    list-style: none;
+}
+
+.portrait:hover p{
+    color: #E3E3E5;
+}
+
+.information {
+   
+    width: 170px;
+    color: black;
+    background-color: white;
+    transform: translateX(-20px);
+    padding: 0;
+    line-height: 0px;
+    height: 0;
+    transition: .3s;
+    opacity: 0;
+    list-style: none;
+}
+
+.information button{
+    text-decoration: none;
+    border: none;
+    background: none;
+    font-size: 20px;
+}
+.information button:hover{
+    color: #888891;
+}
+.information li:hover{
+    background-color:#E3E3E5;
+}
+
+.button:hover a{
+    color: #E3E3E5;
+    list-style: none;
+}
+.portrait:hover .information {
+    height: auto;
+    opacity: 1;
+    line-height: 65px;
+    height: auto;
+}
+
+
+.banner {
+    width: 60%;
+    height: 100vh;
+    margin: auto;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.desc,
+.name {
+    align-self: end;
+
+}
+
+.line {
+    width: 100px;
+    height: 6px;
+    background: #cee002;
+}
+
+.slice{
+
+    margin-left: 20px;
+    margin-bottom:30px ;
+    width: 50%;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+
+}
+
+.slice p{
+
+    width: 100%;
+}
+
+#detail{
+    display: flex;    
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.desc p {
+    width: 50%;
+    font-size: 30px;
+    font-weight: 200;
+    padding-top: 20px;
+    color: #FEFEDF;
+}
+
+h1 {
+    font-size: 100px;
+    color: #FEFEDF;
+}
+
+
+.content {
+    width: 105vw;
+    height: 270vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+footer{
+    font-size: small;
+    width: 100%;
+    height: 10px;
+    text-align: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.HotTag{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;    
+    width: 100px;
+    border: solid 5px;
+    color: #E51E52;
+    border-color: #E51E52;
+    font-size: 50px;
+    height: 230px;
+}
+
+
+.container {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Board {
+    margin-top: 60px;
+    width: 420px;
+    height: 850px;
+    overflow: hidden;
+    position: relative;
+    border: #E3E3E5 solid 0.5px;
+    background-color: #FEFEFE;
+    transition: 0.1s;
+}
+.act{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.act button{
+    width: 170px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    background-color: white;
+    border: black solid 1px;
+    padding: 10px;
+    color: black;
+    font-size: 15px;
+    letter-spacing: 2px;
+    cursor:pointer;
+    border-radius: 5px;      
+}
+
+.act button:hover{
+    background-color: #E51E52;
+    color: white;
+    border: #E51E52 solid 1px;
+    transition: 0.5s;     
+}
+.Board:hover {
+    box-shadow: 0px 9px 10px #E3E3E5;
+    margin-top: 50px;
+}
+.noting{
+    font-size: 10px;
+    color: #E51E52;
+    text-align: left;
+}
+
+.PaintBox {
+    width: 100%;
+    height: 60%;
+}
+
+.PaintBox img {
+    width: 100%;
+    height: 100%;
+}
+
+.ContentBox h1 {
+    font-size: 30px;
+    color: black;
+    margin-top: 30px;
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+
+.ContentBox p {
+    font-size: 15px;
+    color: #727272;
+    font-weight: 200;
+}
+
+/* 遮罩层 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(0,0, 0, 0.2);   /* 实现背景的灰色，利用背景颜色和背景透明度 */
+    z-index:2;
+}
+
+/* 弹窗 */
+.modal-content {
+    position: fixed;
+    top:2%;
+    left: 20%;
+    width: 65%;
+    height: 95%;
+    min-width: 31.125rem;
+    min-height: 18.625rem;
+    border-radius: 6px;
+    background-color: white;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-start;
+    flex-direction: row;
+}
+
+.PaintPlace{
+    margin-top: 20px;
+    height: 95%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;   
+    border-right: black solid 2px;
+}
+
+.PaintPlace img{
+    width: 85%;
+    height: 50%;
+    border-radius: 8px;
+}
+
+.PaintPlace button{
+    width: 170px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    background-color: white;
+    border: black solid 1px;
+    padding: 10px;
+    color: black;
+    font-size: 15px;
+    letter-spacing: 2px;
+    cursor:pointer;
+    border-radius: 5px;  
+}
+.PaintPlace button:hover{
+    background-color: #E51E52;
+    color: white;
+    border: #E51E52 solid 1px;
+    transition: 0.5s;  
+}
+
+.FormPlace{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 90%;
+    height: 100%;
+}
+
+.FormPlace input{
+    background-color: transparent;
+    width:80%;
+    color: black;
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 15px;
+    padding: 10px;
+    text-indent: 10px;
+    font-size: 14px;
+    letter-spacing: 2px;    
+}
+
+.act{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.act button{
+    width: 170px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    background-color: white;
+    border: black solid 1px;
+    padding: 10px;
+    color: black;
+    font-size: 15px;
+    letter-spacing: 2px;
+    cursor:pointer;
+    border-radius: 5px;      
+}
+
+.act button:hover{
+    background-color: #E51E52;
+    color: white;
+    border: #E51E52 solid 1px;
+    transition: 0.5s;     
+}
+

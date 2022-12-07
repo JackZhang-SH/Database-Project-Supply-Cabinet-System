@@ -1,0 +1,497 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif; 
+ }
+ 
+ .header{
+     width: 100vw;
+     height: 20vh;
+     border-bottom: black solid;
+     overflow: hidden;
+ }
+ 
+ .logo{
+     left: 0;
+     padding: 20px;
+     margin: 0;
+     width: 800px;
+     padding-left: 0;
+     margin-left: 0;
+ }
+ 
+ header{
+     font-size: 50px;
+     width: 100%;
+ }
+ 
+ nav{
+     left: 0;
+     width: 100vw;
+     padding: 40px 8%;
+     text-align: center;
+     display:flex;
+     align-items: center;
+     justify-content: space-between;    
+     height: 20vh;
+     transition: 0.5s;
+ }
+ 
+ nav ul{
+     width: auto;
+     margin-top: 10px;
+     transition: 0.5s;
+ }
+ 
+ nav ul li{
+     display: inline-block;
+     list-style: none;
+     margin:20px 30px;
+     color: black;
+     font-size: 17px;
+     transition: 0.5s;
+ }
+ 
+ nav.sticky header{
+     font-size: 50px;
+ }
+ 
+ nav.sticky .logo{
+     padding: 30px;
+     width: 300px;
+     border: none;
+ }
+ 
+ 
+ nav.sticky{
+     position:fixed;
+     top:0;
+     left:0;
+     padding: 40px 8%;
+     background-color: white;
+     display:flex;
+     align-items: center;
+     justify-content: space-between;
+     transition:  0.5s;
+     height: 10vh;
+ }
+ 
+ nav.sticky ul{
+     width: auto;
+ 
+ }
+ 
+ 
+ .button:hover {
+     color: #888891;
+     list-style: none;
+     transition: 0.2s;
+ }
+ 
+ #hidden{
+     width: 0;
+     height: 0;
+     opacity: 0;
+     overflow:hidden;
+     transition: 0.5s;
+ }
+ 
+ .information{
+     transition: 0.5s;
+ }
+ 
+ a{
+     text-decoration: none;
+     color: black;
+ }
+ 
+ a:hover {
+     color: #888891;
+ }
+ 
+ .information{
+     padding: 0;
+     margin: 10px;
+ }
+ 
+ .information:hover{
+     color: #888891;
+     list-style: none;
+ }
+ .search-input {
+    border: none;
+    background: none;
+    width: 0px;
+    height: 30px;
+    border-bottom: #727272 solid 2px;
+    transition: 1s;
+    font-size: 17px;
+}
+
+.search-input:focus {
+    border: none;
+    background: none;
+    border-bottom: black solid 2px;
+    outline: none;
+}
+
+.search-box:hover .search-input{
+    width: 170px;
+}
+
+.content{
+    display: flex;
+    align-items: space-between;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.user{
+    width:38%;
+    border-right: black solid 1px;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.user p{
+    font-size:25px;
+    letter-spacing: 3px;
+    margin-top: 18px;
+    margin-left: 30px;
+    margin-bottom:40px ;
+    font-family:"宋体";
+}
+
+#no_amount{
+    font-size:15px;
+    color: #E51E52;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.user span{
+    font-size:20px;
+    letter-spacing: 3px;
+    margin-bottom:40px ;
+    font-family: sans-serif;
+}
+
+.shoppingInformation{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 30px;
+}
+
+.cart{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: scroll;
+    margin-bottom: 30px;
+}
+
+.cart p{
+    font-size: 25px;
+}
+
+.item{
+    display: flex;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: black solid 1px;
+    margin-bottom: 30px;
+}
+
+.item button{
+    width: 170px;
+    margin-top: 15px;
+    margin-left: 10px;
+    background-color: white;
+    border: black solid 1px;
+    padding: 10px;
+    color: black;
+    font-size: 15px;
+    letter-spacing: 2px;
+    cursor:pointer;
+    border-radius: 5px;
+}
+.item button:hover{
+    background-color: #E51E52;
+    color: white;
+    border: #E51E52 solid 1px;
+    transition: 0.5s;
+}
+.user button{
+    width: 200px;
+    margin-top: 15px;
+    margin-left: 30px;
+    background-color: white;
+    border: black solid 1px;
+    padding: 10px;
+    color: black;
+    font-size: 20px;
+    letter-spacing: 2px;
+    cursor:pointer;
+    border-radius: 5px;
+}
+.user button:hover{
+    background-color: #E51E52;
+    color: white;
+    border: #E51E52 solid 1px;
+    transition: 0.5s;
+}
+.active{
+    border-bottom:solid black 1px ;
+}
+.noting{
+    font-size: 10px;
+    color: #E51E52;
+    text-align: left;
+}
+.item p{
+
+    width: max-content;
+    font-size: 17px;
+    margin-top: 20px;
+    margin-right: 30px;
+
+}
+
+#publish{
+    border: #FE4252 solid 3px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+
+
+#deal{
+    border: #FAEA00 solid 3px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#selling{
+    border: #00DEFF solid 3px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+/* 遮罩层 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(0,0, 0, 0.2);   /* 实现背景的灰色，利用背景颜色和背景透明度 */
+    z-index:2;
+}
+
+
+
+/* 弹窗 */
+.modal-content {
+    position: fixed;
+    top:2%;
+    left: 20%;
+    width: 65%;
+    height: 95%;
+    min-width: 31.125rem;
+    min-height: 18.625rem;
+    border-radius: 6px;
+    background-color: white;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-start;
+    flex-direction: row;
+    overflow: scroll;
+}
+
+
+.PaintPlace{
+    margin-top: 20px;
+    height: 115%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;   
+    border-right: black solid 2px;
+}
+
+.PaintPlace img{
+    width: 85%;
+    height: 50%;
+    border-radius: 8px;
+}
+
+.PaintPlace button{
+    width: 170px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    background-color: white;
+    border: black solid 1px;
+    padding: 10px;
+    color: black;
+    font-size: 15px;
+    letter-spacing: 2px;
+    cursor:pointer;
+    border-radius: 5px;  
+}
+.PaintPlace button:hover{
+    background-color: #E51E52;
+    color: white;
+    border: #E51E52 solid 1px;
+    transition: 0.5s;  
+}
+.PaintPlace input{
+    width: 170px;
+    margin-top: 0px;
+
+}
+.FormPlace{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 90%;
+    height: 100%;
+}
+
+.FormPlace input{
+    background-color: transparent;
+    width:80%;
+    color: black;
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 15px;
+    padding: 10px;
+    text-indent: 10px;
+    font-size: 14px;
+    letter-spacing: 2px;    
+}
+
+.act{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.act button{
+    width: 170px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    background-color: white;
+    border: black solid 1px;
+    padding: 10px;
+    color: black;
+    font-size: 15px;
+    letter-spacing: 2px;
+    cursor:pointer;
+    border-radius: 5px;      
+}
+
+.act button:hover{
+    background-color: #E51E52;
+    color: white;
+    border: #E51E52 solid 1px;
+    transition: 0.5s;     
+}
+
+.act input{
+    width: 170px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    background-color: white;
+    border: black solid 1px;
+    padding: 10px;
+    color: black;
+    font-size: 15px;
+    letter-spacing: 2px;
+    cursor:pointer;
+    border-radius: 5px;      
+}
+
+.act input:hover{
+    background-color: #E51E52;
+    color: white;
+    border: #E51E52 solid 1px;
+    transition: 0.5s;     
+}
+
+/* 遮罩层 */
+.charge {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(0,0, 0, 0.2);   /* 实现背景的灰色，利用背景颜色和背景透明度 */
+    z-index:2;
+}
+
+/* 弹窗 */
+.charge-content {
+    position: fixed;
+    top:20%;
+    left: 30%;
+    width: 35%;
+    height: 55%;
+    min-width: 31.125rem;
+    min-height: 18.625rem;
+    border-radius: 6px;
+    background-color: white;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items:center;
+    flex-direction: column;
+}
+
+.charge-content input{
+    background-color: transparent;
+    width:80%;
+    color: black;
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 60px;
+    padding: 30px;
+    text-indent: 10px;
+    font-size: 14px;
+    letter-spacing: 2px;    
+}
+
+.charge-content h1{
+    margin-top: 20px;
+}
+
+#hidden button{
+    text-decoration: none;
+    border: none;
+    background: none;
+    font-size: 17px;
+}
+#hidden button:hover{
+    color: #888891;
+}

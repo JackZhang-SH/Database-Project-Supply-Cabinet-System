@@ -1,0 +1,63 @@
+<!-- 已完成输入检测提示。对于是否能提交的判断（关于myValid）还需检测。此外，还没有区分用户名和邮箱，我认为这个是后端执行的判断，邮箱和用户名二位一体，都对应唯一的密码 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="form" content="width=device-width,initial-scale=1.0"/>
+    <link rel="stylesheet" href="../CSS/Login.css"/>
+    <title>登录/注册</title>
+
+</head>
+<body>
+    <a href="HomeBeforeLogin.html">返回首页</a>
+    <div class="container">
+        <div class="form-box">  
+                <form action="http://localhost:8080/register.php" method="POST" class="register-box hidden" id="RegisterForm" >  
+                    <h1>REGISTER</h1>
+                    <input name="name"  id="reg_username" type="text" placeholder="用户名" pattern="^\w+$"  onblur="note('reg_username','username_invalid')" required >    
+                    <p id="username_invalid" class="noting"></p> 
+                    <input name="password"  id="reg_password" type="password" placeholder="密码" pattern="^(?![0-9]+$)[0-9A-Za-z]{6,}$" onblur="note('reg_password','password_invalid')" required >   
+                    <!-- 思路：在oninvalid中设置method，用来添加错误提示到下面这个p元素中，可以根据错误不同，进行不同提示 -->
+                    <p id="password_invalid" class="noting"></p> 
+                    <input id="reg_repassword" type="password" placeholder="确认密码" onblur="note('reg_repassword','repassword_invalid');" required >
+                    <p id="repassword_invalid" class="noting"></p> 
+                    <input name="email"  id="reg_email" type="email"   pattern="^[A-Za-z0-9\u4e00-\u9fa5]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$" placeholder="邮箱" onblur="note('reg_email','email_invalid')" required >
+                    <p id="email_invalid" class="noting"></p> 
+                    <input name="tel"  id="reg_telephone" type="tel" placeholder="电话" onblur="note('reg_telephone','tel_invalid')" required >
+                    <p id="tel_invalid" class="noting"></p> 
+                    <input name="address"  id="reg_address" type="text" placeholder="地址" onblur="note('reg_address','address_invalid')" required >
+                    <p id="address_invalid" class="noting"></p> 
+                    <button id="RegisterBtn" type="submit" >注册</button>
+                </form>
+            <form action="http://localhost:8080/login.php" method="POST" class="login-box" id="LoginForm" >
+                <h1>LOGIN</h1>
+                <input name="name" id="log_id"  type="text" placeholder="用户名或邮箱" required onblur="note('log_id','no_id')">
+                <p id="no_id" class="Lognoting"></p>
+                <input name="password" id="log_password" type="password" placeholder="密码" required onblur="note('log_password','no_password')">
+                <p id="no_password" class="Lognoting"></p>
+                <button type="submit" >登录</button>          
+            </form>
+        </div>
+        <div class="con-box left">
+            <div class="logo"><header>Art Store</header></div>
+            <p>已有账号?</p>
+            <button id="login">去登录</button>
+        </div>
+        <div class="con-box right">
+            <div class="logo"><header>Art Store</header></div>
+            <p>没有账号？</p>
+            <button id="register" >去注册</button>
+        </div>
+    </div>
+
+
+    <script src="../JS/Login.js"></script>
+
+</body>
+
+
+
+
+</html>

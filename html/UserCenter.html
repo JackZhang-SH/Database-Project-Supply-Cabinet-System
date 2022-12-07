@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="Searching" content="width=device-width,initial-scale=1.0"/>
+    <link rel="stylesheet" href="../CSS/UserCenter.css"/>
+    <title>UserCenter</title>
+</head>
+<body>
+    <div class="header">
+        <nav id="navbar">
+            <div class="logo"><header>Supply Chain System-Company</header></div>
+            <!-- <ul id="menu">
+                <li class="button">
+                    <a href="HomeBeforeLogin.html">首页</a>
+                </li>
+                <li class="button">
+                    <a href="Searching.html">搜索</a>
+                </li>
+                <li id="name"><a onclick="showList();">用户</a></li>
+                <li id="hidden">
+                    <ul >
+                        <li class="information active"><a href="UserCenter.html">个人中心</a></li>
+                        <li class="information"><a href="shopping.html">购物车</a></li>
+                        <li class="information"><button id="another_open" >发布艺术品</button></li>
+                        <li class="information"><button onclick="logout()">退出</button></li>
+                    </ul>
+                </li>
+            </ul> -->
+        </nav>
+    </div>
+    <div class="content">
+        <div class="user">
+            <p>User_id：<span>zyx</span></p>
+            <p>User_name：<span>123@126.com</span></p>
+            <p>User_type：<span>139000000</span></p>
+            <form id="chargeForm" class="FormPlace" method="post">
+                <input id="item_idList" placeholder="item_id_list" name="item_idList"  type="text" >
+                <input name="amount" id="amount"  type="text" placeholder="amount_List" >
+                <input name="user_x" id="user_x"  type="text" placeholder="user_x" >
+                <input name="user_y" id="user_y"  type="text" placeholder="user_y" >
+                <div class="act">
+                    <button id="charge_admit" type="submit">Submit</button>
+                    <button id="charge_cancel" type="reset">Cancel</button>
+                </div>             
+            </form>
+            <!--  -->
+        </div>
+
+        <div class="shoppingInformation">
+            <div class="cart" id="publish">
+                <p>Items:</p>
+                <div class="item">
+                    <p>Item-id：<span>Shanghai</span></p>
+                    <p>Item-name：<span>Shanghai</span></p>
+                    <button id="open">Update</button>
+                    <button>Delete</button>
+                </div>
+            </div>
+            <div class="cart" id="deal">
+                <p>Vendor Branch:</p>
+                <div class="item">
+                    <p>Vendor：<span>1223213</span></p>
+                    <p>Branch#：<span>Saihangh</span></p>
+                    <p>Location：<span>2022.2.2</span></p>
+                </div>
+            </div>
+            <div class="cart" id="selling">
+                <p>Strategy:</p>
+                <div class="item">
+                    <p>Result：<span id="Strategy">paint</span></p>
+                    <p>Price：<span id="priceCalculation">1.1</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="charge">
+        <div class="charge-content">
+            <h1>Input</h1>
+            <form id="chargeForm"  method="post">
+                <input id="charge" placeholder="请输入充值金额" name="amount" onblur="note('charge', 'charge_invalid')" type="text" pattern="^\+?[1-9][0-9]*$">
+                <p id="charge_invalid"></p>
+                <input name="amount" id="amount"  type="text" placeholder="user_x" >
+                <input name="amount" id="amount"  type="text" placeholder="user_y" >
+                <p id="no_amount"></p>
+                <div class="act">
+                    <button id="charge_admit" type="submit">确定</button>
+                    <button id="charge_cancel" type="reset">取消</button>
+                </div>             
+            </form>
+        </div>
+    </div> -->
+    <div class="modal">
+        <form class="modal-content" id="uploadForm" enctype='multipart/form-data' >
+            <div class="PaintPlace">
+                <img src="../assets/1.jpg" id='photo'/>
+                <input type="file" name="imageInput" id="file" multiple required>
+            </div>
+            <div class="FormPlace" >
+                <input type="text"   name="paintName"  id="paintName" placeholder="作品名称" required onblur="note('paintName','paintName_invalid')">  
+                <p id="paintName_invalid"  class="noting"></p>             
+                <input type="text" name="author" id="author" placeholder="作者" required onblur="note('author','author_invalid')">
+                <p id="author_invalid" class="noting"></p> 
+                <input type="text"  id="description" name="description" placeholder="简介" required onblur="note('description','description_invalid')"> 
+                <p id="description_invalid" class="noting"></p> 
+                <input type="number" name="year" id="year" placeholder="年" required onblur="note('year','year_invalid')">
+                <p id="year_invalid" class="noting"></p> 
+                <input type="text" id="genre" name="genre"  placeholder="流派" required onblur="note('genre','genre_invalid')">
+                <p id="genre_invalid" class="noting"></p> 
+                <input type="number" id="length" name="length" placeholder="长(cm)" required onblur="note('length','length_invalid')">
+                <p id="length_invalid" class="noting"></p> 
+                <input type="number" id="width" name="width" placeholder="宽(cm)" required onblur="note('width','width_invalid')">
+                <p id="width_invalid" class="noting"></p> 
+                <input type="number" id="price" name="price" placeholder="价格" required onblur="note('price','price_invalid')" pattern="^[+]{0,1}(\d+)$">
+                <p id="price_invalid" class="noting"></p> 
+                <div class="act">
+                    <button  type="submit">确定</button>
+                    <button id="paint_cancel" type="reset" >取消</button>
+                </div>
+            </div>
+        </form>
+    </div>
+<script src="../JS/UserCenter.js"></script>
+<script src="../JS/token.js"></script>
+<script src="../JS/upload.js"></script>
+<script>
+    var n = 0; //保证以下只做一次
+    window.addEventListener("load", () => {
+        if (n == 0) {
+            // if ((sessionStorage.token == undefined)) {
+            //     window.location.href = 'HomeBeforeLogin.html';
+            //     alert("您尚未登录！")
+            //     n++;
+            // }
+            // else if (sessionStorage.token != 'YAL') {
+            //     window.location.href = 'HomeBeforeLogin.html';
+            //     alert("您尚未登录！")
+            //     n++;
+            // }
+        }
+    })
+</script>
+</body>
+</html>

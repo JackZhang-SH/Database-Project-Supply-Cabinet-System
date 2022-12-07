@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<link rel="shortcut icon" href="#">
+    <title>Company Page</title>
+    <link rel="stylesheet" href="vendor.css"/>
+    <script src="company_vendor.js"></script>
+  </head>
+  <body>
+    <a href="vbranch">
+   <button>Create/Edit a branch</button>
+	</a>
+	<a href="prices">
+   <button>Good Pricing</button>
+	</a>
+  </body>
+</html>

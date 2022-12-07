@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<link rel="shortcut icon" href="#">
+    <title>Company Branch Page</title>
+    <link rel="stylesheet" href="prices.css"/>
+    <script src="company_vendor.js"></script>
+  </head>
+  <body>
+    <form id="add-good-form" onsubmit="return add_good()">
+      <h1>Vendor Add a Good</h1>
+      <input type="text" placeholder="Item id" name="item_id" required/>
+      <input type="text" placeholder="Vendor branch ID" name="V_branch_id" required/>
+      <input type="text" placeholder="Price" name="Price" required/>
+      <input type="submit" value="Create"/>
+    </form>
+    <form id="update-good-form" onsubmit="return update_good()">
+      <h1>Vendor Update a Good</h1>
+      <input type="text" placeholder="Good id" name="good_id" required/>
+      <input type="text" placeholder="Item id" name="item_id" required/>
+      <input type="text" placeholder="Vendor branch ID" name="V_branch_id" required/>
+      <input type="text" placeholder="New Price" name="Price" required/>
+      <input type="submit" value="Update"/>
+    </form>
+    <form id="delete-good-form" onsubmit="return delete_good()">
+      <h1>Vendor Delete a Good</h1>
+      <input type="text" placeholder="Good id" name="good_id" required/>
+      <input type="submit" value="Update"/>
+    </form>
+    <form id="company_vendorview" onsubmit="return vendorview()">
+      <h1>View vendor branch's product prices</h1>
+      <input type="text" placeholder="Vendor branch ID" name="v_branch_id" required/>
+      <input type="submit" value="View"/>
+    </form>
+    <a href="vendor">
+   <button>Return to Vendor View</button>
+	</a>
+	<ul id="vgood_list"></ul>
+  </body>
+</html>

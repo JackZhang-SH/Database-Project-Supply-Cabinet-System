@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<link rel="shortcut icon" href="#">
+    <title>Company Branch Page</title>
+    <link rel="stylesheet" href="cbranch.css"/>
+    <script src="company_vendor.js"></script>
+    <script src="get_all_c_branches" defer></script>
+  </head>
+  <body>
+    <form id="cbranch-create-form" onsubmit="return cbranch_create()">
+      <h1>Company Branch Creation</h1>
+      <input type="text" placeholder="Location" name="location" required/>
+      <input type="text" value="Create"/>
+    </form>
+    <form id="cbranch-edit-form" onsubmit="return cbranch_edit()">
+      <h1>Company Branch Edit</h1>
+      <input type="text" placeholder="Branch ID" name="C_branch_id" required/>
+      <input type="text" placeholder="New Location" name="location" required/>
+      <input type="submit" value="Update"/>
+    </form>
+    <form id="cbranch-delete-form" onsubmit="return cbranch_delete()">
+      <h1>Company Delete a Branch</h1>
+      <input type="text" placeholder="Branch ID" name="C_branch_id" required/>
+      <input type="submit" value="Delete"/>
+    </form>
+    <a href="company">
+   <button>Return to Company View</button>
+	</a>
+	<ul id="cbranch_list"></ul>
+  </body>
+</html>
+<!--C_branch creation-->

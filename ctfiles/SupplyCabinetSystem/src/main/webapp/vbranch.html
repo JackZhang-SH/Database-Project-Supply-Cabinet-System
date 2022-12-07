@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<link rel="shortcut icon" href="#">
+    <title>Company Branch Page</title>
+    <link rel="stylesheet" href="vbranch.css"/>
+    <script src="company_vendor.js"></script>
+    <script src="get_all_v_branches" defer></script>
+  </head>
+  <body>
+    <form id="vbranch-create-form" onsubmit="return vbranch_create()">
+      <h1>Vendor Branch Creation</h1>
+      <input type="text" placeholder="Location" name="location" required/>
+      <input type="submit" value="Create"/>
+    </form>
+    <form id="vbranch-edit-form" onsubmit="return vbranch_edit()">
+      <h1>Vendor Branch Edit</h1>
+      <input type="text" placeholder="Branch ID" name="V_branch_id" required/>
+      <input type="text" placeholder="New Location" name="newlocation" required/>
+      <input type="submit" value="Update"/>
+    </form>
+    <form id="vbranch-delete-form" onsubmit="return vbranch_delete()">
+      <h1>Vendor Delete a Branch</h1>
+      <input type="text" placeholder="Branch ID" name="V_branch_id" required/>
+      <input type="submit" value="Delete"/>
+    </form>
+    <a href="vendor">
+   <button>Return to Vendor View</button>
+	</a>
+	<ul id="vbranch_list"></ul>
+  </body>
+</html>
+<!--V_branch creation-->

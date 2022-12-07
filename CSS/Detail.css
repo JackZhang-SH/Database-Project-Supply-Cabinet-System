@@ -1,0 +1,405 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif; 
+
+ }
+ 
+ .header{
+     width: 100vw;
+     height: 20vh;
+     border-bottom: black solid;
+     overflow: hidden;
+ }
+ 
+ .logo{
+     left: 0;
+     padding: 20px;
+     margin: 0;
+     width: 300px;
+     padding-left: 0;
+     margin-left: 0;
+ }
+ 
+ header{
+     font-size: 50px;
+     width: 100%;
+ }
+ 
+ nav{
+     left: 0;
+     width: 100vw;
+     padding: 40px 8%;
+     text-align: center;
+     display:flex;
+     align-items: center;
+     justify-content: space-between;    
+     height: 20vh;
+     transition: 0.5s;
+ }
+ 
+ nav ul{
+     width: auto;
+     margin-top: 10px;
+     transition: 0.5s;
+ }
+ 
+ nav ul li{
+     display: inline-block;
+     list-style: none;
+     margin:20px 30px;
+     color: black;
+     font-size: 17px;
+     transition: 0.5s;
+ }
+ 
+ nav.sticky header{
+     font-size: 50px;
+ }
+ 
+ nav.sticky .logo{
+     padding: 30px;
+     width: 300px;
+     border: none;
+ }
+ 
+ 
+ nav.sticky{
+     position:fixed;
+     top:0;
+     left:0;
+     padding: 40px 8%;
+     background-color: white;
+     display:flex;
+     align-items: center;
+     justify-content: space-between;
+     transition:  0.5s;
+     height: 10vh;
+ }
+ 
+ nav.sticky ul{
+     width: auto;
+ 
+ }
+ 
+ 
+ .button:hover {
+     color: #888891;
+     list-style: none;
+     transition: 0.2s;
+ }
+ 
+ #hidden{
+     width: 0;
+     height: 0;
+     opacity: 0;
+     overflow:hidden;
+     transition: 0.5s;
+ }
+ 
+ .information{
+     transition: 0.5s;
+ }
+ 
+ a{
+     text-decoration: none;
+     color: black;
+ }
+ 
+ a:hover {
+     color: #888891;
+ }
+ 
+ .information{
+     padding: 0;
+     margin: 10px;
+ }
+ 
+ .information:hover{
+     color: #888891;
+     list-style: none;
+ }
+ .search-input {
+    border: none;
+    background: none;
+    width: 0px;
+    height: 30px;
+    border-bottom: #727272 solid 2px;
+    transition: 1s;
+    font-size: 17px;
+}
+
+.search-input:focus {
+    border: none;
+    background: none;
+    border-bottom: black solid 2px;
+    outline: none;
+}
+
+.search-box:hover .search-input{
+    width: 170px;
+}
+
+.content{
+    width: 100vw;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 0;
+    height: 130vh;
+}
+
+#like{
+    margin-left: 80px;
+    margin-right: 100px;
+    margin-bottom:10px;
+}
+
+
+
+#buy{
+    width: 300px;
+    height: 80px;
+    margin-top: 0px;   
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #727272 3px solid;
+    border-radius: 7px;
+}
+
+#buy p{
+    margin-top: 40px;
+}
+.like_buy{
+    width: 600px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.like_buy button{
+    border: none;
+    background: none;
+    transition: 0.5s;
+}
+
+#buy:hover{
+    background-color:#F9F871;
+    border: #F9F871 3px solid;
+}
+
+.act{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.act button{
+    width: 170px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    background-color: white;
+    border: black solid 1px;
+    padding: 10px;
+    color: black;
+    font-size: 15px;
+    letter-spacing: 2px;
+    cursor:pointer;
+    border-radius: 5px;      
+}
+.active{
+    border-bottom:solid black 1px ;
+}
+.act button:hover{
+    background-color: #E51E52;
+    color: white;
+    border: #E51E52 solid 1px;
+    transition: 0.5s;     
+}
+
+.paint{
+    margin-top: 40px;
+    width:40%;
+    height: 102vh;
+    margin-right: 0px;
+    margin-left: 60px;
+}
+.noting{
+    font-size: 10px;
+    color: #E51E52;
+    text-align: left;
+}
+.paint img{
+    width: 100%;
+    height: 100%;
+}
+
+.detail{
+   margin-top: 0px;
+   height: 100%;
+   margin-left: 60px;
+   width: 50%;
+
+}
+
+.detail p{
+    font-size:25px;
+    letter-spacing: 3px;
+    margin-top: 18px;
+    margin-left: 30px;
+    margin-bottom:40px ;
+    font-family: cursive;
+}
+
+.detail span{
+    font-size:25px;
+    letter-spacing: 3px;
+    margin: 25px;
+    margin-bottom:40px ;
+    font-family: cursive;
+}
+
+#nameOfPaint span{
+    font-size: 60px;
+    margin-bottom: 60px;
+    margin-left: 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* 遮罩层 */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(0,0, 0, 0.2);   /* 实现背景的灰色，利用背景颜色和背景透明度 */
+    z-index:2;
+}
+
+/* 弹窗 */
+.modal-content {
+    position: fixed;
+    top:2%;
+    left: 20%;
+    width: 65%;
+    height: 95%;
+    min-width: 31.125rem;
+    min-height: 18.625rem;
+    border-radius: 6px;
+    background-color: white;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items:flex-start;
+    flex-direction: row;
+}
+
+.PaintPlace{
+    margin-top: 20px;
+    height: 95%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;   
+    border-right: black solid 2px;
+}
+
+.PaintPlace img{
+    width: 85%;
+    height: 50%;
+    border-radius: 8px;
+}
+
+.PaintPlace button{
+    width: 170px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    background-color: white;
+    border: black solid 1px;
+    padding: 10px;
+    color: black;
+    font-size: 15px;
+    letter-spacing: 2px;
+    cursor:pointer;
+    border-radius: 5px;  
+}
+.PaintPlace button:hover{
+    background-color: #E51E52;
+    color: white;
+    border: #E51E52 solid 1px;
+    transition: 0.5s;  
+}
+
+.FormPlace{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 90%;
+    height: 100%;
+}
+
+.FormPlace input{
+    background-color: transparent;
+    width:80%;
+    color: black;
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 15px;
+    padding: 10px;
+    text-indent: 10px;
+    font-size: 14px;
+    letter-spacing: 2px;    
+}
+
+.act{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.act button{
+    width: 170px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+    margin-left: 10px;
+    background-color: white;
+    border: black solid 1px;
+    padding: 10px;
+    color: black;
+    font-size: 15px;
+    letter-spacing: 2px;
+    cursor:pointer;
+    border-radius: 5px;      
+}
+
+.act button:hover{
+    background-color: #E51E52;
+    color: white;
+    border: #E51E52 solid 1px;
+    transition: 0.5s;     
+}
+
+
+#hidden button{
+    text-decoration: none;
+    border: none;
+    background: none;
+    font-size: 17px;
+}
+#hidden button:hover{
+    color: #888891;
+}
